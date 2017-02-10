@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine on
+ #RewriteCond %{REQUEST_FILENAME} !-d
+ #RewriteCond %{REQUEST_FILENAME} !-f
+ RewriteCond $1 !^(index\.php|data/attached/ad_img|data/attached/article_pic|data/attached/cat_image|data/attached/image|favicon\.ico|themes/default/js|themes/default/images|themes/default/fonts|themes/default/css|robots\.txt|crontab)
+ RewriteRule ^(.*)$ index.php?r=/$1 [QSA,PT,L]
+</IfModule>
